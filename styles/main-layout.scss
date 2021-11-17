@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;1,300;1,400&display=swap');
+main{
+  font-family: 'Kanit', sans-serif;
+}
+
 .app-container {
   .side-nav {
     position: fixed;
@@ -9,6 +14,7 @@
 
   .menu-container {
     border-color: transparent;
+    
   }
 
   h1.owncast-title {

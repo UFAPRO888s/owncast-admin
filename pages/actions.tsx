@@ -70,11 +70,11 @@ function NewActionModal(props: Props) {
       okButtonProps={okButtonProps}
     >
       <div>
-        Add the URL for the external action you want to present.{' '}
-        <strong>Only HTTPS urls are supported.</strong>
+      เพิ่ม URL สำหรับการดำเนินการภายนอกที่คุณต้องการนำเสนอ{' '}
+        <strong>รองรับเฉพาะ URL HTTPS เท่านั้น.</strong>
         <p>
           <a href="https://owncast.online/docs" target="_blank" rel="noopener noreferrer">
-            Read more about external actions.
+          อ่านเพิ่มเติมเกี่ยวกับการดำเนินการภายนอก
           </a>
         </p>
         <p>
@@ -115,14 +115,14 @@ function NewActionModal(props: Props) {
             value={actionColor}
             onChange={input => setActionColor(input.currentTarget.value)}
           />
-          Optional background color of the action button.
+          สีพื้นหลังที่เลือกได้ของปุ่มการทำงาน.
         </p>
         <Checkbox
           checked={openExternally}
           defaultChecked={openExternally}
           onChange={onOpenExternallyChanged}
         >
-          Open in a new tab instead of within your page.
+          เปิดในแท็บใหม่แทนภายในหน้าของคุณ
         </Checkbox>
       </div>
     </Modal>
@@ -270,19 +270,19 @@ export default function Actions() {
 
   return (
     <div>
-      <Title>External Actions</Title>
+      <Title>การดำเนินการภายนอก</Title>
       <Paragraph>
-        External action URLs are 3rd party UI you can display, embedded, into your Owncast page when
-        a user clicks on a button to launch your action.
+      URL การดำเนินการภายนอกคือ UI ของบุคคลที่สามที่คุณสามารถแสดง ฝัง ลงในหน้า Owncast ของคุณได้เมื่อ
+        ผู้ใช้คลิกที่ปุ่มเพื่อเปิดการกระทำของคุณ
       </Paragraph>
       <Paragraph>
-        Read more about how to use actions, with examples, at{' '}
+      อ่านเพิ่มเติมเกี่ยวกับวิธีใช้การกระทำพร้อมตัวอย่างที่{' '}
         <a
-          href="https://owncast.online/thirdparty/?source=admin"
+          href="https://ufapro888s.info/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          our documentation
+          เอกสารของเรา
         </a>
         .
       </Paragraph>
@@ -295,7 +295,7 @@ export default function Actions() {
       />
       <br />
       <Button type="primary" onClick={showCreateModal}>
-        Create New Action
+      สร้างแอคชั่นใหม่
       </Button>
       <FormStatusIndicator status={submitStatus} />
 

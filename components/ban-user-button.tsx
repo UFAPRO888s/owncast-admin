@@ -38,8 +38,8 @@ export default function BanUserButton({ user, isEnabled, label, onClick }: BanUs
 
   const content = (
     <>
-      Are you sure you want to {actionString} <strong>{user.displayName}</strong>
-      {isEnabled ? ' and remove their messages?' : '?'}
+      คุณแน่ใจหรือว่าคุณต้องการ {actionString} <strong>{user.displayName}</strong>
+      {isEnabled ? ' และลบข้อความของพวกเขา?' : '?'}
     </>
   );
 

@@ -12,7 +12,7 @@ export default function ConfigVideoSettings() {
     <div className="config-video-variants">
       <Title>Video configuration</Title>
       <p className="description">
-        Before changing your video configuration{' '}
+      ก่อนเปลี่ยนการกำหนดค่าวิดีโอของคุณ{' '}
         <a
           href="https://owncast.online/docs/video?source=admin"
           target="_blank"
@@ -20,9 +20,9 @@ export default function ConfigVideoSettings() {
         >
           visit the video documentation
         </a>{' '}
-        to learn how it impacts your stream performance. The general rule is to start conservatively
-        by having one middle quality stream output variant and experiment with adding more of varied
-        qualities.
+        เพื่อเรียนรู้ว่าสิ่งนี้ส่งผลต่อประสิทธิภาพการสตรีมของคุณอย่างไร กฎทั่วไปคือเริ่มต้นอย่างระมัดระวัง
+        โดยการมีตัวแปรเอาต์พุตสตรีมคุณภาพกลางหนึ่งรายการและทดลองโดยเพิ่มความหลากหลายให้มากขึ้น
+        คุณสมบัติ
       </p>
 
       <Row gutter={[16, 16]}>

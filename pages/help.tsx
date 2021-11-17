@@ -87,7 +87,7 @@ export default function Help() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <LinkOutlined /> Learn more
+            <LinkOutlined /> เรียนรู้เพิ่มเติม
           </a>
         </div>
       ),

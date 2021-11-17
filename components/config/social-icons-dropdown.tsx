@@ -20,8 +20,8 @@ export default function SocialDropdown({ iconList, selectedOption, onSelected }:
   return (
     <div className="social-dropdown-container">
       <p className="description">
-        If you are looking for a platform name not on this list, please select Other and type in
-        your own name. A logo will not be provided.
+      หากคุณกำลังมองหาชื่อแพลตฟอร์มที่ไม่ได้อยู่ในรายการนี้ โปรดเลือก อื่นๆ แล้วพิมพ์
+        ชื่อของคุณเอง โลโก้จะไม่มีให้
       </p>
 
       <div className="formfield-container">

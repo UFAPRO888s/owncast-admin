@@ -21,7 +21,7 @@ interface Article {
 
 function ArticleItem({ title, url, content_html: content, date_published: date }: Article) {
   const dateObject = new Date(date);
-  const dateString = format(dateObject, 'MMM dd, yyyy, HH:mm');
+  const dateString = format(dateObject, 'dd MMM, yyyy, HH:mm');
   return (
     <article>
       <Collapse>
@@ -62,11 +62,11 @@ export default function NewsFeed() {
   }, []);
 
   const loadingSpinner = loading ? <Skeleton loading active /> : null;
-  const noNews = !loading && feed.length === 0 ? <div>No news.</div> : null;
+  const noNews = !loading && feed.length === 0 ? <div>ไม่มี ประกาศ.</div> : null;
 
   return (
     <section className="news-feed form-module">
-      <Title level={2}>News &amp; Updates from Owncast</Title>
+      <Title level={2}>ข่าวสาร &amp;จากแอดมิน</Title>
       {loadingSpinner}
       {feed.map(item => (
         <ArticleItem {...item} key={item.url} />

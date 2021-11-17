@@ -136,7 +136,7 @@ export default function Chat() {
 
   const chatColumns: ColumnsType<MessageType> = [
     {
-      title: 'Time',
+      title: 'เวลา',
       dataIndex: 'timestamp',
       key: 'timestamp',
       className: 'timestamp-col',
@@ -149,7 +149,7 @@ export default function Chat() {
       width: 90,
     },
     {
-      title: 'User',
+      title: 'ผู้ใช้',
       dataIndex: 'user',
       key: 'user',
       className: 'name-col',
@@ -165,7 +165,7 @@ export default function Chat() {
       width: 110,
     },
     {
-      title: 'Message',
+      title: 'ข้อความ',
       dataIndex: 'body',
       key: 'body',
       className: 'message-col',
@@ -202,10 +202,10 @@ export default function Chat() {
 
   return (
     <div className="chat-messages">
-      <Title>Chat Messages</Title>
-      <p>Manage the messages from viewers that show up on your stream.</p>
+      <Title>ข้อความแชท</Title>
+      <p>จัดการข้อความจากผู้ชมที่แสดงบนสตรีมของคุณ.</p>
       <div className={bulkDivClasses}>
-        <span className="label">Check multiple messages to change their visibility to: </span>
+        <span className="label">ตรวจสอบหลายข้อความเพื่อเปลี่ยนการมองเห็นเป็น: </span>
 
         <Button
           type="primary"
@@ -229,7 +229,7 @@ export default function Chat() {
           disabled={!selectedRowKeys.length || (bulkAction && bulkAction !== 'hide')}
           onClick={handleSubmitBulkHide}
         >
-          Hide
+          ซ่อน
         </Button>
       </div>
       <Table

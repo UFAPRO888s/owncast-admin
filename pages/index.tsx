@@ -116,17 +116,17 @@ export default function Home() {
             <Row gutter={[16, 16]} align="middle">
               <Col span={8} sm={24} md={8}>
                 <Statistic
-                  title={`Stream started ${formatRelative(broadcastDate, Date.now())}`}
+                  title={`เริ่มสตรีม ${formatRelative(broadcastDate, Date.now())}`}
                   value={formatDistanceToNow(broadcastDate)}
                   prefix={<ClockCircleOutlined />}
                 />
               </Col>
               <Col span={8} sm={24} md={8}>
-                <Statistic title="Viewers" value={viewerCount} prefix={<UserOutlined />} />
+                <Statistic title="ผู้ชม" value={viewerCount} prefix={<UserOutlined />} />
               </Col>
               <Col span={8} sm={24} md={8}>
                 <Statistic
-                  title="Peak viewer count"
+                  title="จำนวนผู้ชมสูงสุด"
                   value={sessionPeakViewerCount}
                   prefix={<UserOutlined />}
                 />
@@ -139,7 +139,7 @@ export default function Home() {
           <Col className="stream-details" span={12} sm={24} md={24} lg={12}>
             <Card
               size="small"
-              title="Outbound Stream Details"
+              title="รายละเอียดสตรีมขาออก"
               type="inner"
               className="outbound-details"
             >
@@ -149,18 +149,18 @@ export default function Home() {
             <Card size="small" title="Inbound Stream Details" type="inner">
               <Statistic
                 className="stream-details-item"
-                title="Input"
+                title="ข้อมูลขาเข้า"
                 value={`${encoder} ${formatIPAddress(remoteAddr)}`}
               />
               <Statistic
                 className="stream-details-item"
-                title="Inbound Video Stream"
+                title="สตรีมวิดีโอขาเข้า"
                 value={streamDetails}
                 formatter={streamDetailsFormatter}
               />
               <Statistic
                 className="stream-details-item"
-                title="Inbound Audio Stream"
+                title="สตรีมเสียงขาเข้า"
                 value={streamAudioDetailString}
               />
             </Card>

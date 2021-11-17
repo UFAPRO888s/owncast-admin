@@ -46,7 +46,7 @@ export default function ViewersOverTime() {
 
   return (
     <>
-      <Typography.Title>Viewer Info</Typography.Title>
+      <Typography.Title>ข้อมูลผู้ดู</Typography.Title>
       <br />
       <Row gutter={[16, 16]} justify="space-around">
         {online && (
@@ -60,21 +60,21 @@ export default function ViewersOverTime() {
         )}
         <Col md={online ? 8 : 12}>
           <StatisticItem
-            title={online ? 'Max viewers this session' : 'Max viewers last session'}
+            title={online ? 'ผู้ชมสูงสุดในเซสชั่นนี้' : 'ผู้ชมสูงสุดเซสชันล่าสุด'}
             value={sessionPeakViewerCount.toString()}
             prefix={<UserOutlined />}
           />
         </Col>
         <Col md={online ? 8 : 12}>
           <StatisticItem
-            title="All-time max viewers"
+            title="ผู้ชมสูงสุดตลอดกาล"
             value={overallPeakViewerCount.toString()}
             prefix={<UserOutlined />}
           />
         </Col>
       </Row>
 
-      <Chart title="Viewers" data={viewerInfo} color="#2087E2" unit="" />
+      <Chart title="ผู้ชม" data={viewerInfo} color="#2087E2" unit="" />
     </>
   );
 }

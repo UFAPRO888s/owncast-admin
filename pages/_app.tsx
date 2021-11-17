@@ -26,6 +26,9 @@ import AlertMessageProvider from '../utils/alert-message-context';
 
 import MainLayout from '../components/main-layout';
 
+declare module '*.png';
+
+
 function App({ Component, pageProps }: AppProps) {
   return (
     <ServerStatusProvider>
@@ -39,3 +42,4 @@ function App({ Component, pageProps }: AppProps) {
 }
 
 export default App;
+

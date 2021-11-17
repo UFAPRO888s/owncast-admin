@@ -42,12 +42,12 @@ export default function Offline({ logs = [], config }: OfflineProps) {
       content: (
         <div>
           <a
-            href="https://owncast.online/docs/broadcasting/?source=admin"
+            href="https://ufapro888s.info/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn how to point your existing software to your new server and start streaming your
-            content.
+          เรียนรู้วิธีชี้ซอฟต์แวร์ที่มีอยู่ของคุณไปยังเซิร์ฟเวอร์ใหม่และเริ่มสตรีมของคุณ
+            เนื้อหา.
           </a>
           <div className="stream-info-container">
             <Text strong className="stream-info-label">
@@ -66,28 +66,28 @@ export default function Offline({ logs = [], config }: OfflineProps) {
         </div>
       ),
     },
-    {
-      icon: <PlaySquareTwoTone twoToneColor="#f9826c" />,
-      title: 'Embed your video onto other sites',
-      content: (
-        <div>
-          <a
-            href="https://owncast.online/docs/embed?source=admin"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn how you can add your Owncast stream to other sites you control.
-          </a>
-        </div>
-      ),
-    },
+    // {
+    //   icon: <PlaySquareTwoTone twoToneColor="#f9826c" />,
+    //   title: 'Embed your video onto other sites',
+    //   content: (
+    //     <div>
+    //       <a
+    //         href="https://owncast.online/docs/embed?source=admin"
+    //         target="_blank"
+    //         rel="noopener noreferrer"
+    //       >
+    //         Learn how you can add your Owncast stream to other sites you control.
+    //       </a>
+    //     </div>
+    //   ),
+    // },
   ];
 
   if (!config?.chatDisabled) {
     data.push({
       icon: <MessageTwoTone twoToneColor="#0366d6" />,
-      title: 'Chat is disabled',
-      content: <span>Chat will continue to be disabled until you begin a live stream.</span>,
+      title: 'แชทถูกปิดการใช้งาน',
+      content: <span>แชทจะถูกปิดใช้งานต่อไปจนกว่าคุณจะเริ่มสตรีมแบบสด</span>,
     });
   }
 
@@ -97,7 +97,7 @@ export default function Offline({ logs = [], config }: OfflineProps) {
       title: 'Find an audience on the Owncast Directory',
       content: (
         <div>
-          List yourself in the Owncast Directory and show off your stream. Enable it in{' '}
+          ระบุตัวเองใน ข้อมูล PR ที่จะ LIVE{' '}
           <Link href="/config-public-details">settings.</Link>
         </div>
       ),
@@ -109,8 +109,8 @@ export default function Offline({ logs = [], config }: OfflineProps) {
     title: 'Not sure what to do next?',
     content: (
       <div>
-        If you&apos;re having issues or would like to know how to customize and configure your
-        Owncast server visit <Link href="/help">the help page.</Link>
+        หากคุณกำลังประสบปัญหาหรือต้องการทราบวิธีปรับแต่งและกำหนดค่าของคุณ
+        เยี่ยมชมเซิร์ฟเวอร์<Link href="/help">หน้าช่วยเหลือ.</Link>
       </div>
     ),
   });
@@ -124,8 +124,8 @@ export default function Offline({ logs = [], config }: OfflineProps) {
               <OwncastLogo />
             </span>
             <div>
-              <Title level={2}>No stream is active</Title>
-              <p>You should start one.</p>
+              <Title level={2}>ไม่มีสตรีมที่ใช้งานอยู่</Title>
+              <p>คุณควรเริ่มต้นอย่างใดอย่างหนึ่ง.</p>
             </div>
           </div>
         </Col>

@@ -57,32 +57,32 @@ export default function ChatUsers() {
     <>
       <ClientTable data={clients} />
       <p className="description">
-        Visit the{' '}
+      เยี่ยมชม{' '}
         <a
-          href="https://owncast.online/docs/viewers/?source=admin"
+          href="https://ufapro888s.info/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          documentation
+          เอกสาร
         </a>{' '}
-        to configure additional details about your viewers.
+        เพื่อกำหนดค่ารายละเอียดเพิ่มเติมเกี่ยวกับผู้ดูของคุณ
       </p>
     </>
   ) : (
     <p className="description">
-      When a stream is active and chat is enabled, connected chat clients will be displayed here.
+      เมื่อสตรีมทำงานและเปิดใช้งานการแชท ไคลเอนต์แชทที่เชื่อมต่อจะแสดงที่นี่
     </p>
   );
 
   return (
     <Tabs defaultActiveKey="1">
-      <TabPane tab={<span>Connected {online ? `(${clients.length})` : '(offline)'}</span>} key="1">
+      <TabPane tab={<span>เชื่อมต่อแล้ว {online ? `(${clients.length})` : '(offline)'}</span>} key="1">
         {connectedUsers}
       </TabPane>
-      <TabPane tab={<span>Banned {online ? `(${disabledUsers.length})` : null}</span>} key="2">
+      <TabPane tab={<span>บุคคลห้ามพูด {online ? `(${disabledUsers.length})` : null}</span>} key="2">
         <UserTable data={disabledUsers} />
       </TabPane>
-      <TabPane tab={<span>Moderators {online ? `(${moderators.length})` : null}</span>} key="3">
+      <TabPane tab={<span>ผู้ดูแล {online ? `(${moderators.length})` : null}</span>} key="3">
         <UserTable data={moderators} />
       </TabPane>
     </Tabs>

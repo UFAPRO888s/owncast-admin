@@ -80,19 +80,19 @@ export default function UserPopover({ user, connectionInfo, children }: UserPopo
       >
         <div className="user-details">
           <Typography.Title level={4}>{displayName}</Typography.Title>
-          <p className="created-at">User created at {createdAtDate}.</p>
+          <p className="created-at">ผู้ใช้สร้าง เมื่อ {createdAtDate}.</p>
           <Row gutter={16}>
             {connectionInfo && (
               <Col md={lastNameChangeDate ? 12 : 24}>
                 <Typography.Title level={5}>
-                  This user is currently connected to Chat.
+                ผู้ใช้รายนี้เชื่อมต่อกับ Chat.
                 </Typography.Title>
                 <ul className="connection-info">
                   <li>
-                    <strong>Active for:</strong> {formatDistanceToNow(new Date(connectedAt))}
+                    <strong>ใช้งานอยู่สำหรับ:</strong> {formatDistanceToNow(new Date(connectedAt))}
                   </li>
                   <li>
-                    <strong>Messages sent:</strong> {messageCount}
+                    <strong>ข้อความที่ส่ง:</strong> {messageCount}
                   </li>
                   <li>
                     <strong>User Agent:</strong>
@@ -104,7 +104,7 @@ export default function UserPopover({ user, connectionInfo, children }: UserPopo
             )}
             {lastNameChangeDate && (
               <Col md={connectionInfo ? 12 : 24}>
-                <Typography.Title level={5}>This user is also seen as:</Typography.Title>
+                <Typography.Title level={5}>ผู้ใช้รายนี้ยังถูกมองว่าเป็น:</Typography.Title>
                 <ul className="previous-names-list">
                   {uniq(nameList).map((name, index) => (
                     <li className={index === 0 ? 'latest' : ''}>
@@ -119,7 +119,7 @@ export default function UserPopover({ user, connectionInfo, children }: UserPopo
           <Divider />
           {disabledAt ? (
             <>
-              This user was banned on <code>{formatDisplayDate(disabledAt)}</code>.
+              ผู้ใช้รายนี้ถูกแบนเมื่อ <code>{formatDisplayDate(disabledAt)}</code>.
               <br />
               <br />
               <BlockUserbutton

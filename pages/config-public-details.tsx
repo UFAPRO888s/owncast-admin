@@ -12,15 +12,15 @@ const { Title } = Typography;
 export default function PublicFacingDetails() {
   return (
     <div className="config-public-details-page">
-      <Title>General Settings</Title>
+      <Title>การตั้งค่าทั่วไป</Title>
       <p className="description">
-        The following are displayed on your site to describe your stream and its content.{' '}
+      ข้อมูลต่อไปนี้ จะแสดงบนไซต์ของคุณ เพื่ออธิบายสตรีมและเนื้อหาของคุณ.{' '}
         <a
-          href="https://owncast.online/docs/website/?source=admin"
+          href="https://ufapro888s.info/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn more.
+          เรียนรู้เพิ่มเติม
         </a>
       </p>
 

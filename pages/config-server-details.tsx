@@ -7,10 +7,10 @@ const { Title } = Typography;
 export default function ConfigServerDetails() {
   return (
     <div className="config-server-details-form">
-      <Title>Server Settings</Title>
+      <Title>การตั้งค่าเซิร์ฟเวอร์</Title>
       <p className="description">
-        You should change your stream key from the default and keep it safe. For most people
-        it&apos;s likely the other settings will not need to be changed.
+      คุณควรเปลี่ยนสตรีมคีย์จากค่าเริ่มต้นและเก็บไว้ให้ปลอดภัย สำหรับคนส่วนใหญ่
+        เป็นไปได้ว่าการตั้งค่าอื่นๆ จะไม่ต้องเปลี่ยนแปลง
       </p>
       <div className="form-module config-server-details-container">
         <EditServerDetails />
