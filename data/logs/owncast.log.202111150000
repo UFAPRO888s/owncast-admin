@@ -42,3 +42,8 @@ time="2021-11-17T10:40:39Z" level=info msg="Video transcoder started using x264 
 time="2021-11-17T10:40:40Z" level=info msg="RTMP is accepting inbound streams on port 1935."
 time="2021-11-17T10:40:40Z" level=info msg="Web server is listening on IP 0.0.0.0 port 8080."
 time="2021-11-17T10:40:40Z" level=info msg="The web admin interface is available at /admin."
+time="2021-11-17T13:46:53Z" level=info msg="Owncast vdev-docker (20211117)"
+time="2021-11-17T13:46:53Z" level=info msg="Video transcoder started using x264 with 1 stream variants."
+time="2021-11-17T13:46:54Z" level=info msg="RTMP is accepting inbound streams on port 1935."
+time="2021-11-17T13:46:54Z" level=info msg="Web server is listening on IP 0.0.0.0 port 8080."
+time="2021-11-17T13:46:54Z" level=info msg="The web admin interface is available at /admin."
