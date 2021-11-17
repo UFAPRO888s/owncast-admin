@@ -13,7 +13,7 @@ export default function PublicFacingDetails() {
   return (
     <div className="config-public-details-page">
       <Title>การตั้งค่าทั่วไป</Title>
-      <p className="description">ข้อมูลต่อไปนี้ จะแสดงบนไซต์ของคุณ เพื่ออธิบายสตรีมและเนื้อหาของคุณ.{' '}
+      <p className="description">ข้อมูลต่อไปนี้ จะแสดงบนไซต์ ตั้งหัวข้อให้โดดเด่น เพื่อดึงลูกค้า.{' '}
         <a
           href="https://ufapro888s.info/"
           target="_blank"

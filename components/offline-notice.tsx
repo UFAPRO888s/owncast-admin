@@ -1,12 +1,12 @@
 import {
   BookTwoTone,
   MessageTwoTone,
-  PlaySquareTwoTone,
+  //PlaySquareTwoTone,
   ProfileTwoTone,
   QuestionCircleTwoTone,
 } from '@ant-design/icons';
 import { Card, Col, Row, Typography } from 'antd';
-import Link from 'next/link';
+//import Link from 'next/link';
 import { useContext } from 'react';
 import LogTable from './log-table';
 import OwncastLogo from './logo';
@@ -46,8 +46,7 @@ export default function Offline({ logs = [], config }: OfflineProps) {
             target="_blank"
             rel="noopener noreferrer"
           >
-          เรียนรู้วิธีชี้ซอฟต์แวร์ที่มีอยู่ของคุณไปยังเซิร์ฟเวอร์ใหม่และเริ่มสตรีมของคุณ
-            เนื้อหา.
+          หากไม่เข้าใจติดต่อ ผู้ดูแลระบบ
           </a>
           <div className="stream-info-container">
             <Text strong className="stream-info-label">

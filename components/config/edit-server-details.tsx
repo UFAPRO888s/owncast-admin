@@ -50,7 +50,7 @@ export default function EditInstanceDetails() {
   };
 
   const showConfigurationRestartMessage = () => {
-    setMessage('การอัปเดตการตั้งค่าเซิร์ฟเวอร์ต้องรีสตาร์ทเซิร์ฟเวอร์ Owncast ของคุณ.');
+    setMessage('การอัปเดตการตั้งค่าเซิร์ฟเวอร์ต้องรีสตาร์ทเซิร์ฟเวอร์.');
   };
 
   const showStreamKeyChangeMessage = () => {

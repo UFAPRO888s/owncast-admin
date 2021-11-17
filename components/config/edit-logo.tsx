@@ -16,7 +16,7 @@ import {
   STATUS_PROCESSING,
   STATUS_SUCCESS,
 } from '../../utils/input-statuses';
-import { NEXT_PUBLIC_API_HOST } from '../../utils/apis';
+//import { NEXT_PUBLIC_API_HOST } from '../../utils/apis';
 
 const ACCEPTED_FILE_TYPES = ['image/svg+xml', 'image/png', 'image/jpeg', 'image/gif'];
 

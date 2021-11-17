@@ -9,8 +9,7 @@ export default function ConfigServerDetails() {
     <div className="config-server-details-form">
       <Title>การตั้งค่าเซิร์ฟเวอร์</Title>
       <p className="description">
-      คุณควรเปลี่ยนสตรีมคีย์จากค่าเริ่มต้นและเก็บไว้ให้ปลอดภัย สำหรับคนส่วนใหญ่
-        เป็นไปได้ว่าการตั้งค่าอื่นๆ จะไม่ต้องเปลี่ยนแปลง
+      ควรเปลี่ยนสตรีมคีย์ ไปเรื่อยๆ หรือ ตั้งแล้ว เก็บให้ดี
       </p>
       <div className="form-module config-server-details-container">
         <EditServerDetails />
