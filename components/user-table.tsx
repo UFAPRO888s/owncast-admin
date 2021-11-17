@@ -11,7 +11,7 @@ export function formatDisplayDate(date: string | Date) {
 export default function UserTable({ data }: UserTableProps) {
   const columns = [
     {
-      title: 'Last Known Display Name',
+      title: 'ผู้ใช้งานล่าสุด',
       dataIndex: 'displayName',
       key: 'displayName',
       // eslint-disable-next-line react/destructuring-assignment

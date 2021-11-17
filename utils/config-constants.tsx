@@ -5,7 +5,6 @@ import { TEXTFIELD_TYPE_URL } from '../components/config/form-textfield';
 import { DEFAULT_TEXTFIELD_URL_PATTERN } from './urls';
 
 export const TEXT_MAXLENGTH = 255;
-
 export const RESET_TIMEOUT = 3000;
 
 // CONFIG API ENDPOINTS

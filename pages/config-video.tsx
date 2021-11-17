@@ -11,14 +11,13 @@ export default function ConfigVideoSettings() {
   return (
     <div className="config-video-variants">
       <Title>Video configuration</Title>
-      <p className="description">
-      ก่อนเปลี่ยนการกำหนดค่าวิดีโอของคุณ{' '}
-        <a
-          href="https://owncast.online/docs/video?source=admin"
+      <p className="description">ก่อนเปลี่ยนการกำหนดค่าวิดีโอของคุณ{' '}
+      <a
+          href="https://ufapro888s.info/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          visit the video documentation
+         เยี่ยมชมเว็บไซต์
         </a>{' '}
         เพื่อเรียนรู้ว่าสิ่งนี้ส่งผลต่อประสิทธิภาพการสตรีมของคุณอย่างไร กฎทั่วไปคือเริ่มต้นอย่างระมัดระวัง
         โดยการมีตัวแปรเอาต์พุตสตรีมคุณภาพกลางหนึ่งรายการและทดลองโดยเพิ่มความหลากหลายให้มากขึ้น

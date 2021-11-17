@@ -20,16 +20,12 @@ module.exports = {
     'react/jsx-props-no-spreading': 'off',
     'react/jsx-no-bind': 'off',
     'react/function-component-definition': 'off',
-
     '@next/next/no-img-element': 'off',
-
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': 'error',
     'no-console': 'off',
-
     'no-use-before-define': [0],
     '@typescript-eslint/no-use-before-define': [1],
-
     'react/jsx-no-target-blank': [1, { allowReferrer: false, enforceDynamicLinks: 'always' }],
     'import/extensions': [
       'error',

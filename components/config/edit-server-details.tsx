@@ -24,13 +24,9 @@ export default function EditInstanceDetails() {
   const [formDataValues, setFormDataValues] = useState(null);
   const serverStatusData = useContext(ServerStatusContext);
   const { setMessage } = useContext(AlertMessageContext);
-
   const { serverConfig } = serverStatusData || {};
-
   const { streamKey, ffmpegPath, rtmpServerPort, webServerPort, yp } = serverConfig;
-
   const [copyIsVisible, setCopyVisible] = useState(false);
-
   const COPY_TOOLTIP_TIMEOUT = 3000;
 
   useEffect(() => {
@@ -54,18 +50,18 @@ export default function EditInstanceDetails() {
   };
 
   const showConfigurationRestartMessage = () => {
-    setMessage('Updating server settings requires a restart of your Owncast server.');
+    setMessage('การอัปเดตการตั้งค่าเซิร์ฟเวอร์ต้องรีสตาร์ทเซิร์ฟเวอร์ Owncast ของคุณ.');
   };
 
   const showStreamKeyChangeMessage = () => {
     setMessage(
-      'Changing your stream key will log you out of the admin and block you from streaming until you change the key in your broadcasting software.',
+      'การเปลี่ยนสตรีมคีย์จะทำให้คุณออกจากระบบผู้ดูแลระบบและบล็อกไม่ให้คุณสตรีมจนกว่าคุณจะเปลี่ยนคีย์ในซอฟต์แวร์การแพร่ภาพ.',
     );
   };
 
   const showFfmpegChangeMessage = () => {
     if (serverStatusData.online) {
-      setMessage('The updated ffmpeg path will be used when starting your next live stream.');
+      setMessage('ระบบจะใช้เส้นทาง ffmpeg ที่อัปเดตเมื่อเริ่มสตรีมสดครั้งต่อไปของคุณ.');
     }
   };
 

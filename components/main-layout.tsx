@@ -94,9 +94,9 @@ export default function MainLayout(props) {
     : '';
   const currentThumbnail = online ? (
     <img
-      src="/thumbnail.jpg"
+      src="https://ufax24.com/wp-content/uploads/2021/06/LOGO-UFAx24-X12-1.png"
       className="online-thumbnail"
-      alt="current thumbnail"
+      alt="Ufax24 thumbnail"
       style={{ width: '10rem' }}
     />
   ) : null;
@@ -121,8 +121,8 @@ export default function MainLayout(props) {
   return (
     <Layout className={appClass}>
       <Head>
-        <title>UFAX Admin</title>
-        <link rel="icon" type="image/png" sizes="32x32" href="https://ufax24.com/wp-content/uploads/2021/06/LOGO-UFAx24-X12-1.png" />
+        <title>UFAX LIVE Admin</title>
+        <link rel="icon" type="image/png" sizes="32x32" href="https://u12tv.com/wp-content/uploads/2021/05/live-sexy.png" />
       </Head>
 
       <Sider width={240} className="side-nav">
@@ -133,10 +133,11 @@ export default function MainLayout(props) {
           className="menu-container"
         >
           <h1 className="owncast-title">
-            <span className="logo-container">
-            <OwncastLogo />
+            <span className="">
+            <img className="navlogox24" src="https://ufax24.com/wp-content/uploads/2021/06/LOGO-UFAx24-X12-1.png" alt="LOGOX24" />
+            {/* <OwncastLogo /> */}
             </span>
-            <span className="title-label">UFAX Admin</span>
+            <span className="title-label">LIVE</span>
           </h1>
           <Menu.Item key="home" icon={<HomeOutlined />}>
             <Link href="/">Home</Link>
@@ -175,9 +176,9 @@ export default function MainLayout(props) {
             <Menu.Item key="config-chat">
               <Link href="/config-chat">Chat</Link>
             </Menu.Item>
-            <Menu.Item key="config-storage">
+            {/* <Menu.Item key="config-storage">
               <Link href="/config-storage">S3 Storage</Link>
-            </Menu.Item>
+            </Menu.Item> */}
           </SubMenu>
 
           {/*  <SubMenu key="utilities-menu" icon={<ToolOutlined />} title="Utilities">
@@ -230,7 +231,7 @@ export default function MainLayout(props) {
 
         <Footer className="footer-container">
           <a href="https://ufapro888s.info/" target="_blank" rel="noopener noreferrer">
-            UFAX {versionNumber}
+            UFAX LIVE STEAMING {versionNumber}
           </a>
         </Footer>
       </Layout>

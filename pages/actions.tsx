@@ -69,13 +69,12 @@ function NewActionModal(props: Props) {
       onCancel={onCancel}
       okButtonProps={okButtonProps}
     >
-      <div>
-      เพิ่ม URL สำหรับการดำเนินการภายนอกที่คุณต้องการนำเสนอ{' '}
+      <div>เพิ่ม URL สำหรับการดำเนินการภายนอกที่คุณต้องการนำเสนอ{' '}
         <strong>รองรับเฉพาะ URL HTTPS เท่านั้น.</strong>
         <p>
-          <a href="https://owncast.online/docs" target="_blank" rel="noopener noreferrer">
-          อ่านเพิ่มเติมเกี่ยวกับการดำเนินการภายนอก
-          </a>
+        <a href="https://ufapro888s.info/" target="_blank" rel="noopener noreferrer">
+        อ่านเพิ่มเติมเกี่ยวกับการดำเนินการภายนอก
+        </a>
         </p>
         <p>
           <Input

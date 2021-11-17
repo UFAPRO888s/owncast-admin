@@ -3,9 +3,7 @@ import { Row, Col, Typography } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
 import Chart from '../components/chart';
 import StatisticItem from '../components/statistic';
-
 import { ServerStatusContext } from '../utils/server-status-context';
-
 import { VIEWERS_OVER_TIME, fetchData } from '../utils/apis';
 
 const FETCH_INTERVAL = 60 * 1000; // 1 min

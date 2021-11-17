@@ -81,11 +81,11 @@ export default function EditInstanceTags() {
     resetStates();
     const newTag = newTagInput.trim();
     if (newTag === '') {
-      setSubmitStatus(createInputStatus(STATUS_WARNING, 'Please enter a tag'));
+      setSubmitStatus(createInputStatus(STATUS_WARNING, 'ใส่แท็ก'));
       return;
     }
     if (tags.some(tag => tag.toLowerCase() === newTag.toLowerCase())) {
-      setSubmitStatus(createInputStatus(STATUS_WARNING, 'This tag is already used!'));
+      setSubmitStatus(createInputStatus(STATUS_WARNING, 'แท็กนี้ถูกใช้ไปแล้ว!'));
       return;
     }
 
@@ -103,10 +103,10 @@ export default function EditInstanceTags() {
   return (
     <div className="tag-editor-container">
       <Title level={3} className="section-title">
-        Add Tags
+      เพิ่มแท็ก
       </Title>
       <p className="description">
-        This is a great way to categorize your Owncast server on the Directory!
+      วิธีที่ ในการ จัดหมวดหมู่เซิร์ฟเวอร์!
       </p>
 
       <div className="edit-current-strings">

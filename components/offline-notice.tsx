@@ -38,7 +38,7 @@ export default function Offline({ logs = [], config }: OfflineProps) {
   const data = [
     {
       icon: <BookTwoTone twoToneColor="#6f42c1" />,
-      title: 'Use your broadcasting software',
+      title: 'หาก live ผ่านโปรแกรม ให้ตั้งค่า RTMP ตามนนี้',
       content: (
         <div>
           <a
@@ -94,11 +94,11 @@ export default function Offline({ logs = [], config }: OfflineProps) {
   if (!config?.yp?.enabled) {
     data.push({
       icon: <ProfileTwoTone twoToneColor="#D18BFE" />,
-      title: 'Find an audience on the Owncast Directory',
+      title: 'ความปลอดภัยสำหรับ การ LIVE ที่นี่',
       content: (
         <div>
-          ระบุตัวเองใน ข้อมูล PR ที่จะ LIVE{' '}
-          <Link href="/config-public-details">settings.</Link>
+          ระบบกำลัง พัฒนา โปรแกรมป้องการ บันทึกหน้าจอจาก USER{' '}
+          <a href="#">กำลังสร้างอยู่</a>
         </div>
       ),
     });
@@ -106,11 +106,10 @@ export default function Offline({ logs = [], config }: OfflineProps) {
 
   data.push({
     icon: <QuestionCircleTwoTone twoToneColor="#ffd33d" />,
-    title: 'Not sure what to do next?',
+    title: 'ไม่แน่ใจว่าจะทำอย่างไรต่อไป?',
     content: (
       <div>
-        หากคุณกำลังประสบปัญหาหรือต้องการทราบวิธีปรับแต่งและกำหนดค่าของคุณ
-        เยี่ยมชมเซิร์ฟเวอร์<Link href="/help">หน้าช่วยเหลือ.</Link>
+       ต้องการความช่วยเหลือ หรือ สอบถามการใช้งาน <a href="https://line.me/R/ti/p/panutchakorn_2533" > ติดต่อผู้ดูแล ระบบ</a>
       </div>
     ),
   });
@@ -120,8 +119,8 @@ export default function Offline({ logs = [], config }: OfflineProps) {
       <Row>
         <Col span={12} offset={6}>
           <div className="offline-intro">
-            <span className="logo">
-              <OwncastLogo />
+            <span className="logo-svg">
+            <OwncastLogo />
             </span>
             <div>
               <Title level={2}>ไม่มีสตรีมที่ใช้งานอยู่</Title>

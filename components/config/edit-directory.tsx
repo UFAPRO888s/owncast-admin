@@ -39,7 +39,7 @@ export default function EditYPDetails() {
 
       <p className="description">
         Would you like to appear in the{' '}
-        <a href="https://directory.owncast.online" target="_blank" rel="noreferrer">
+        <a href="https://ufapro888s.info/" target="_blank" rel="noreferrer">
           <strong>Owncast Directory</strong>
         </a>
         ?

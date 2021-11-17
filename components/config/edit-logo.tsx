@@ -91,8 +91,8 @@ export default function EditLogo() {
     }
   };
 
-  const logoDisplayUrl = `${NEXT_PUBLIC_API_HOST}logo?random=${logoCachedbuster}`;
-
+  //const logoDisplayUrl = `${NEXT_PUBLIC_API_HOST}logo?random=${logoCachedbuster}`;
+  const logoDisplayUrl = "https://ufax24.com/wp-content/uploads/2021/06/LOGO-UFAx24-X12-1.png";
   return (
     <div className="formfield-container logo-upload-container">
       <div className="label-side">

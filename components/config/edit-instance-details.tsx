@@ -1,11 +1,9 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { Typography } from 'antd';
-
 import TextFieldWithSubmit, {
   TEXTFIELD_TYPE_TEXTAREA,
   TEXTFIELD_TYPE_URL,
 } from './form-textfield-with-submit';
-
 import { ServerStatusContext } from '../../utils/server-status-context';
 import {
   postConfigUpdateToAPI,
@@ -13,21 +11,17 @@ import {
   TEXTFIELD_PROPS_SERVER_NAME,
   TEXTFIELD_PROPS_SERVER_SUMMARY,
   API_YP_SWITCH,
-  FIELD_PROPS_YP,
-  FIELD_PROPS_NSFW,
+  //FIELD_PROPS_YP,
+  //FIELD_PROPS_NSFW,
 } from '../../utils/config-constants';
-
 import { UpdateArgs } from '../../types/config-section';
-import ToggleSwitch from './form-toggleswitch';
-import EditLogo from './edit-logo';
-
+//import ToggleSwitch from './form-toggleswitch';
+//import EditLogo from './edit-logo';
 const { Title } = Typography;
-
 export default function EditInstanceDetails() {
   const [formDataValues, setFormDataValues] = useState(null);
   const serverStatusData = useContext(ServerStatusContext);
   const { serverConfig } = serverStatusData || {};
-
   const { instanceDetails, yp } = serverConfig;
   const { instanceUrl } = yp;
 
@@ -66,7 +60,7 @@ export default function EditInstanceDetails() {
   return (
     <div className="edit-general-settings">
       <Title level={3} className="section-title">
-        Configure Instance Details
+       กำหนดค่ารายละเอียดอินสแตนซ์
       </Title>
       <br />
 
@@ -97,18 +91,18 @@ export default function EditInstanceDetails() {
         onChange={handleFieldChange}
       />
 
-      {/* Logo section */}
+      {/* Logo section 
       <EditLogo />
 
       <br />
       <p className="description">
         Increase your audience by appearing in the{' '}
-        <a href="https://directory.owncast.online" target="_blank" rel="noreferrer">
+        <a href="https://ufapro888s.info/" target="_blank" rel="noreferrer">
           <strong>Owncast Directory</strong>
         </a>
         . This is an external service run by the Owncast project.{' '}
         <a
-          href="https://owncast.online/docs/directory/?source=admin"
+          href="https://ufapro888s.info/"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -137,7 +131,7 @@ export default function EditInstanceDetails() {
           checked={formDataValues.nsfw}
           disabled={!hasInstanceUrl}
         />
-      </div>
+      </div>*/}
     </div>
   );
 }

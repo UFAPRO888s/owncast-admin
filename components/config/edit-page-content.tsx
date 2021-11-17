@@ -86,13 +86,13 @@ export default function EditPageContent() {
   return (
     <div className="edit-page-content">
       <Title level={3} className="section-title">
-        Custom Page Content
+        แก้ไข หน้าเว็บ
       </Title>
 
       <p className="description">
-        Edit the content of your page by using simple{' '}
+        เว็บไซต์ แสดงผลระหว่าง ที่มีการ LIVE{' '}
         <a
-          href="https://www.markdownguide.org/basic-syntax/"
+          href="https://ufapro888s.info/"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -115,7 +115,7 @@ export default function EditPageContent() {
       <div className="page-content-actions">
         {hasChanged && (
           <Button type="primary" onClick={handleSave}>
-            Save
+            บันทึก
           </Button>
         )}
         <FormStatusIndicator status={submitStatus} />

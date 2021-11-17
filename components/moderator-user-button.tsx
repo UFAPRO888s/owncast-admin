@@ -37,7 +37,7 @@ export default function ModeratorUserButton({ user, onClick }: ModeratorUserButt
 
   const content = (
     <>
-      Are you sure you want to {actionString} <strong>{user.displayName}</strong>?
+      คุณแน่ใจหรือว่าคุณต้องการ {actionString} <strong>{user.displayName}</strong>?
     </>
   );
 

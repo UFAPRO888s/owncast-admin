@@ -53,7 +53,7 @@ export default function UserPopover({ user, connectionInfo, children }: UserPopo
         title={
           <>
             Created at: {createdAtDate}.
-            <br /> Click for more info.
+            <br /> UFAX DEV.
           </>
         }
         placement="bottomLeft"

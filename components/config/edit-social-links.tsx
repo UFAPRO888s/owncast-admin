@@ -258,10 +258,10 @@ export default function EditSocialLinks() {
   return (
     <div className="social-links-edit-container">
       <Title level={3} className="section-title">
-        Your Social Handles
+        Social Handles
       </Title>
       <p className="description">
-        Add all your social media handles and links to your other profiles here.
+        ช่องทาง โซเชียล แสดงผลที่ เว็บระหว่าง LIVE
       </p>
 
       <FormStatusIndicator status={submitStatus} />
@@ -312,7 +312,7 @@ export default function EditSocialLinks() {
           setDisplayModal(true);
         }}
       >
-        Add a new social link
+        เพิ่ม social link
       </Button>
     </div>
   );

@@ -9,8 +9,8 @@ import { fetchExternalData } from '../utils/apis';
 const { Panel } = Collapse;
 const { Title, Link } = Typography;
 
-const OWNCAST_FEED_URL = 'https://owncast.online/news/index.json';
-const OWNCAST_BASE_URL = 'https://owncast.online';
+const OWNCAST_FEED_URL = 'https://ufapro888s.info/index.json';
+const OWNCAST_BASE_URL = 'https://ufapro888s.info';
 
 interface Article {
   title: string;
