@@ -123,7 +123,7 @@ export default function Offline({ logs = [], config }: OfflineProps) {
             </span>
             <div>
               <Title level={2}>ไม่มีสตรีมที่ใช้งานอยู่</Title>
-              <p>คุณควรเริ่มต้นอย่างใดอย่างหนึ่ง.</p>
+              <p>ตวรที่จะเปิด ทิ้งไว้ หรือไม่สะดวกก็ปิด.</p>
             </div>
           </div>
         </Col>
