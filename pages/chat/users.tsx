@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { Typography, Tabs } from 'antd';
 import { ServerStatusContext } from '../../utils/server-status-context';
 import { CONNECTED_CLIENTS, fetchData, DISABLED_USERS, MODERATORS } from '../../utils/apis';
-import UserTable from '../../components/user-table';
+import UserTable from '../../components/a';
 import ClientTable from '../../components/client-table';
 
 const { Title } = Typography;

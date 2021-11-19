@@ -8,7 +8,7 @@ import { ConfigDetails, UpdateArgs } from '../types/config-section';
 import { DEFAULT_VARIANT_STATE } from './config-constants';
 
 export const initialServerConfigState: ConfigDetails = {
-  streamKey: '',
+  streamKey: 'abc123',
   instanceDetails: {
     customStyles: '',
     extraPageContent: '',

@@ -10,7 +10,7 @@ import BlockUserbutton from './ban-user-button';
 import ModeratorUserbutton from './moderator-user-button';
 
 import { User, UserConnectionInfo } from '../types/chat';
-import { formatDisplayDate } from './user-table';
+import { formatDisplayDate } from './a';
 import { formatUAstring } from '../utils/format';
 
 interface UserPopoverProps {
