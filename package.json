@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export --isolatedModules",
+    "build": "next build && next export",
     "start": "next start",
-    "lint": "eslint --ext .js,.ts,.tsx types/ pages/ components/"
+    "lint": "eslint --ext .js,.ts,.tsx types/ pages/ components/ --fix"
   },
   "dependencies": {
     "@ant-design/icons": "^4.7.0",

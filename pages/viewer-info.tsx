@@ -9,70 +9,70 @@ import { VIEWERS_OVER_TIME, fetchData } from '../utils/apis';
 const FETCH_INTERVAL = 60 * 1000; // 1 min
 
 export default function ViewersOverTime() {
-  const context = useContext(ServerStatusContext);
-  const { online, viewerCount, overallPeakViewerCount, sessionPeakViewerCount } = context || {};
+	const context = useContext(ServerStatusContext);
+	const { online, viewerCount, overallPeakViewerCount, sessionPeakViewerCount } = context || {};
 
-  const [viewerInfo, setViewerInfo] = useState([]);
+	const [viewerInfo, setViewerInfo] = useState([]);
 
-  const getInfo = async () => {
-    try {
-      const result = await fetchData(VIEWERS_OVER_TIME);
-      setViewerInfo(result);
-    } catch (error) {
-      console.log('==== error', error);
-    }
-  };
+	const getInfo = async () => {
+		try {
+			const result = await fetchData(VIEWERS_OVER_TIME);
+			setViewerInfo(result);
+		} catch (error) {
+			console.log('==== error', error);
+		}
+	};
 
-  useEffect(() => {
-    let getStatusIntervalId = null;
+	useEffect(() => {
+		let getStatusIntervalId = null;
 
-    getInfo();
-    if (online) {
-      getStatusIntervalId = setInterval(getInfo, FETCH_INTERVAL);
-      // returned function will be called on component unmount
-      return () => {
-        clearInterval(getStatusIntervalId);
-      };
-    }
+		getInfo();
+		if (online) {
+			getStatusIntervalId = setInterval(getInfo, FETCH_INTERVAL);
+			// returned function will be called on component unmount
+			return () => {
+				clearInterval(getStatusIntervalId);
+			};
+		}
 
-    return () => [];
-  }, [online]);
+		return () => [];
+	}, [online]);
 
-  if (!viewerInfo.length) {
-    return 'no info';
-  }
+	if (!viewerInfo.length) {
+		return 'no info';
+	}
 
-  return (
-    <>
-      <Typography.Title>ข้อมูลผู้ดู</Typography.Title>
-      <br />
-      <Row gutter={[16, 16]} justify="space-around">
-        {online && (
-          <Col span={8} md={8}>
-            <StatisticItem
-              title="Current viewers"
-              value={viewerCount.toString()}
-              prefix={<UserOutlined />}
-            />
-          </Col>
-        )}
-        <Col md={online ? 8 : 12}>
-          <StatisticItem
-            title={online ? 'ผู้ชมสูงสุดในเซสชั่นนี้' : 'ผู้ชมสูงสุดเซสชันล่าสุด'}
-            value={sessionPeakViewerCount.toString()}
-            prefix={<UserOutlined />}
-          />
-        </Col>
-        <Col md={online ? 8 : 12}>
-          <StatisticItem
-            title="ผู้ชมสูงสุดตลอดกาล"
-            value={overallPeakViewerCount.toString()}
-            prefix={<UserOutlined />}
-          />
-        </Col>
-      </Row>
+	return (
+		<>
+			<Typography.Title>ข้อมูลผู้ดู</Typography.Title>
+			<br />
+			<Row gutter={[16, 16]} justify="space-around">
+				{online && (
+					<Col span={8} md={8}>
+						<StatisticItem
+							title="Current viewers"
+							value={viewerCount.toString()}
+							prefix={<UserOutlined />}
+						/>
+					</Col>
+				)}
+				<Col md={online ? 8 : 12}>
+					<StatisticItem
+						title={online ? 'ผู้ชมสูงสุดในเซสชั่นนี้' : 'ผู้ชมสูงสุดเซสชันล่าสุด'}
+						value={sessionPeakViewerCount.toString()}
+						prefix={<UserOutlined />}
+					/>
+				</Col>
+				<Col md={online ? 8 : 12}>
+					<StatisticItem
+						title="ผู้ชมสูงสุดตลอดกาล"
+						value={overallPeakViewerCount.toString()}
+						prefix={<UserOutlined />}
+					/>
+				</Col>
+			</Row>
 
-      <Chart title="ผู้ชม" data={viewerInfo} color="#2087E2" unit="" />
-    </>
-  );
+			<Chart title="ผู้ชม" data={viewerInfo} color="#2087E2" unit="" />
+		</>
+	);
 }

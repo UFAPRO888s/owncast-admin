@@ -14,136 +14,134 @@ import { formatDisplayDate } from './a';
 import { formatUAstring } from '../utils/format';
 
 interface UserPopoverProps {
-  user: User;
-  connectionInfo?: UserConnectionInfo | null;
-  children: ReactNode;
+	user: User;
+	connectionInfo?: UserConnectionInfo | null;
+	children: ReactNode;
 }
 
 export default function UserPopover({ user, connectionInfo, children }: UserPopoverProps) {
-  const [isModalVisible, setIsModalVisible] = useState(false);
-  const handleShowModal = () => {
-    setIsModalVisible(true);
-  };
-  const handleCloseModal = () => {
-    setIsModalVisible(false);
-  };
+	const [isModalVisible, setIsModalVisible] = useState(false);
+	const handleShowModal = () => {
+		setIsModalVisible(true);
+	};
+	const handleCloseModal = () => {
+		setIsModalVisible(false);
+	};
 
-  const { displayName, createdAt, previousNames, nameChangedAt, disabledAt } = user;
-  const { connectedAt, messageCount, userAgent } = connectionInfo || {};
+	const { displayName, createdAt, previousNames, nameChangedAt, disabledAt } = user;
+	const { connectedAt, messageCount, userAgent } = connectionInfo || {};
 
-  let lastNameChangeDate = null;
-  const nameList = previousNames && [...previousNames];
+	let lastNameChangeDate = null;
+	const nameList = previousNames && [...previousNames];
 
-  if (previousNames && previousNames.length > 1 && nameChangedAt) {
-    lastNameChangeDate = new Date(nameChangedAt);
-    // reverse prev names for display purposes
-    nameList.reverse();
-  }
+	if (previousNames && previousNames.length > 1 && nameChangedAt) {
+		lastNameChangeDate = new Date(nameChangedAt);
+		// reverse prev names for display purposes
+		nameList.reverse();
+	}
 
-  const dateObject = new Date(createdAt);
-  const createdAtDate = format(dateObject, 'PP pp');
+	const dateObject = new Date(createdAt);
+	const createdAtDate = format(dateObject, 'PP pp');
 
-  const lastNameChangeDuration = lastNameChangeDate
-    ? formatDistanceToNow(lastNameChangeDate)
-    : null;
+	const lastNameChangeDuration = lastNameChangeDate
+		? formatDistanceToNow(lastNameChangeDate)
+		: null;
 
-  return (
-    <>
-      <Tooltip
-        title={
-          <>
-            Created at: {createdAtDate}.
-            <br /> UFAX DEV.
-          </>
-        }
-        placement="bottomLeft"
-      >
-        <button
-          type="button"
-          aria-label="Display more details about this user"
-          className="user-item-container"
-          onClick={handleShowModal}
-        >
-          {children}
-        </button>
-      </Tooltip>
+	return (
+		<>
+			<Tooltip
+				title={
+					<>
+						Created at: {createdAtDate}.
+						<br /> UFAX DEV.
+					</>
+				}
+				placement="bottomLeft"
+			>
+				<button
+					type="button"
+					aria-label="Display more details about this user"
+					className="user-item-container"
+					onClick={handleShowModal}
+				>
+					{children}
+				</button>
+			</Tooltip>
 
-      <Modal
-        destroyOnClose
-        width={600}
-        cancelText="Close"
-        okButtonProps={{ style: { display: 'none' } }}
-        title={`User details: ${displayName}`}
-        visible={isModalVisible}
-        onOk={handleCloseModal}
-        onCancel={handleCloseModal}
-      >
-        <div className="user-details">
-          <Typography.Title level={4}>{displayName}</Typography.Title>
-          <p className="created-at">ผู้ใช้สร้าง เมื่อ {createdAtDate}.</p>
-          <Row gutter={16}>
-            {connectionInfo && (
-              <Col md={lastNameChangeDate ? 12 : 24}>
-                <Typography.Title level={5}>
-                ผู้ใช้รายนี้เชื่อมต่อกับ Chat.
-                </Typography.Title>
-                <ul className="connection-info">
-                  <li>
-                    <strong>ใช้งานอยู่สำหรับ:</strong> {formatDistanceToNow(new Date(connectedAt))}
-                  </li>
-                  <li>
-                    <strong>ข้อความที่ส่ง:</strong> {messageCount}
-                  </li>
-                  <li>
-                    <strong>User Agent:</strong>
-                    <br />
-                    {formatUAstring(userAgent)}
-                  </li>
-                </ul>
-              </Col>
-            )}
-            {lastNameChangeDate && (
-              <Col md={connectionInfo ? 12 : 24}>
-                <Typography.Title level={5}>ผู้ใช้รายนี้ยังถูกมองว่าเป็น:</Typography.Title>
-                <ul className="previous-names-list">
-                  {uniq(nameList).map((name, index) => (
-                    <li className={index === 0 ? 'latest' : ''}>
-                      <span className="user-name-item">{name}</span>
-                      {index === 0 ? ` (Changed ${lastNameChangeDuration} ago)` : ''}
-                    </li>
-                  ))}
-                </ul>
-              </Col>
-            )}
-          </Row>
-          <Divider />
-          {disabledAt ? (
-            <>
-              ผู้ใช้รายนี้ถูกแบนเมื่อ <code>{formatDisplayDate(disabledAt)}</code>.
-              <br />
-              <br />
-              <BlockUserbutton
-                label="Unban this user"
-                user={user}
-                isEnabled={false}
-                onClick={handleCloseModal}
-              />
-            </>
-          ) : (
-            <BlockUserbutton
-              label="Ban this user"
-              user={user}
-              isEnabled
-              onClick={handleCloseModal}
-            />
-          )}
-          <ModeratorUserbutton user={user} onClick={handleCloseModal} />
-        </div>
-      </Modal>
-    </>
-  );
+			<Modal
+				destroyOnClose
+				width={600}
+				cancelText="Close"
+				okButtonProps={{ style: { display: 'none' } }}
+				title={`User details: ${displayName}`}
+				visible={isModalVisible}
+				onOk={handleCloseModal}
+				onCancel={handleCloseModal}
+			>
+				<div className="user-details">
+					<Typography.Title level={4}>{displayName}</Typography.Title>
+					<p className="created-at">ผู้ใช้สร้าง เมื่อ {createdAtDate}.</p>
+					<Row gutter={16}>
+						{connectionInfo && (
+							<Col md={lastNameChangeDate ? 12 : 24}>
+								<Typography.Title level={5}>ผู้ใช้รายนี้เชื่อมต่อกับ Chat.</Typography.Title>
+								<ul className="connection-info">
+									<li>
+										<strong>ใช้งานอยู่สำหรับ:</strong> {formatDistanceToNow(new Date(connectedAt))}
+									</li>
+									<li>
+										<strong>ข้อความที่ส่ง:</strong> {messageCount}
+									</li>
+									<li>
+										<strong>User Agent:</strong>
+										<br />
+										{formatUAstring(userAgent)}
+									</li>
+								</ul>
+							</Col>
+						)}
+						{lastNameChangeDate && (
+							<Col md={connectionInfo ? 12 : 24}>
+								<Typography.Title level={5}>ผู้ใช้รายนี้ยังถูกมองว่าเป็น:</Typography.Title>
+								<ul className="previous-names-list">
+									{uniq(nameList).map((name, index) => (
+										<li className={index === 0 ? 'latest' : ''}>
+											<span className="user-name-item">{name}</span>
+											{index === 0 ? ` (Changed ${lastNameChangeDuration} ago)` : ''}
+										</li>
+									))}
+								</ul>
+							</Col>
+						)}
+					</Row>
+					<Divider />
+					{disabledAt ? (
+						<>
+							ผู้ใช้รายนี้ถูกแบนเมื่อ <code>{formatDisplayDate(disabledAt)}</code>.
+							<br />
+							<br />
+							<BlockUserbutton
+								label="Unban this user"
+								user={user}
+								isEnabled={false}
+								onClick={handleCloseModal}
+							/>
+						</>
+					) : (
+						<BlockUserbutton
+							label="Ban this user"
+							user={user}
+							isEnabled
+							onClick={handleCloseModal}
+						/>
+					)}
+					<ModeratorUserbutton user={user} onClick={handleCloseModal} />
+				</div>
+			</Modal>
+		</>
+	);
 }
 
 UserPopover.defaultProps = {
-  connectionInfo: null,
+	connectionInfo: null,
 };
