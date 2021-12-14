@@ -1,6 +1,4 @@
 # Ignore artifacts:
 node_modules
-build
-coverage
-out
+
 
